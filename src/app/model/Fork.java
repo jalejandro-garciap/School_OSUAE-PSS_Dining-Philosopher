@@ -40,7 +40,7 @@ public class Fork {
 	public synchronized void takeFork(int id_f) throws InterruptedException {
 		while (!free)
 			this.wait();
-		System.out.println("El Filósofo " + (id_f + 1) + " coge el tenedor " + (id + 1));
+		System.out.println("El Filósofo " + (id_f + 1) + " toma el tenedor " + (id + 1));
 		// Siempre se valora si el log es distinto a null, si lo es se ecribe en la interface gráfica:
 		free = false;
 	}
